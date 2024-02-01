@@ -1,5 +1,4 @@
-const CURRENCY_API =
-  "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json/?currencies=USD";
+const CURRENCY_API = "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json/?currencies=USD";
 
 const OMEDIAS_RATE = 2.5;
 
@@ -19,6 +18,6 @@ export async function calculateDiff(initialSalary) {
 
   return {
     diff,
-    salaryInGELWithCurrentRate,
+    salaryInGELWithCurrentRate
   };
 }
