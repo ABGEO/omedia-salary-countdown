@@ -9,8 +9,9 @@ async function getCurrentRate() {
   return currencyData[0]["currencies"][0]["rate"];
 }
 
+const currentRate = await getCurrentRate();
+
 export async function calculateDiff(initialSalary) {
-  const currentRate = await getCurrentRate();
   const salaryInUSDWithOmediasRate = initialSalary / OMEDIAS_RATE;
   const salaryInGELWithCurrentRate = salaryInUSDWithOmediasRate * currentRate;
   const diff = salaryInGELWithCurrentRate - initialSalary;
